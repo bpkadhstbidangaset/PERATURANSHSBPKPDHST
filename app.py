@@ -27,7 +27,7 @@ SUBJUDUL = secret("SUBJUDUL", "Unduh dokumen, format, dan formulir resmi dengan 
 LOGO_URL = secret("LOGO_URL", "")
 LOGO_FILE = secret("LOGO_FILE", "")  # contoh: "streamlit/logo.png" (file di repository)
 KONTAK = secret("KONTAK", "")
-TEMA = str(secret("TEMA", "biru")).strip().lower()  # biru | hijau | merah
+TEMA = str(secret("TEMA", "emerald")).strip().lower()  # biru | hijau | emerald | merah
 
 def ikon_halaman():
     try:
@@ -46,11 +46,14 @@ TEMA_WARNA = {
     "hijau": dict(navy="#0B6B3A", dark="#064E2A", mid="#1FA35C", gold="#F2B705", bg="#F2F8F4",
                   tint="#E3F4EA", bbg="#FFF6D6", btx="#8A6500", sub="#D4F0DF",
                   shadow="rgba(11,107,58,.25)"),
+    "emerald": dict(navy="#047857", dark="#064E3B", mid="#10B981", gold="#F59E0B", bg="#F0FAF6",
+                    tint="#D1FAE5", bbg="#FEF3C7", btx="#92400E", sub="#D1FAE5",
+                    shadow="rgba(4,120,87,.25)"),
     "merah": dict(navy="#B91C1C", dark="#7F1212", mid="#E0413F", gold="#F2B705", bg="#FBF5F5",
                   tint="#FDE8E8", bbg="#FFF6D6", btx="#8A6500", sub="#FAD7D7",
                   shadow="rgba(185,28,28,.25)"),
 }
-W = TEMA_WARNA.get(TEMA, TEMA_WARNA["biru"])
+W = TEMA_WARNA.get(TEMA, TEMA_WARNA["emerald"])
 
 # ---------- Gaya (tema portal pemerintahan) ----------
 st.markdown(
